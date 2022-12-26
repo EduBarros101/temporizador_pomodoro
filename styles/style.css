@@ -1,0 +1,68 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --bg-color: rgba(18, 18, 20, 1);
+  --base-color: 194;
+  --bg-primary-light: hsla(var(--base-color), 100%, 63%, 0.13);
+  --primary-color: hsl(var(--base-color), 100%, 63%);
+  --txt-color: rgba(255, 255, 255, 1);
+}
+
+#timer {
+  display: flex;
+  font-size: clamp(4rem, 4rem + 10vw, 8.8rem);
+}
+
+#controls {
+  display: flex;
+  gap: 3.2rem;
+  width: clamp(10rem, 10rem + 30vw, 22.8rem);
+  padding: 2.2rem 2.5rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: var(--bg-primary-light);
+}
+
+.hide {
+  display: none;
+}
+
+.play svg path,
+.pause svg path,
+.sound-on svg path {
+  fill: var(--primary-color);
+}
+
+body {
+  display: grid;
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+  background: var(--bg-color);
+  color: var(--txt-color);
+}
+
+main {
+  place-self: center;
+}
+
+button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+button svg {
+  width: clamp(3.2rem, 2rem + 12vw, 6.4rem);
+}
+
+footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: 3.2rem;
+}/*# sourceMappingURL=style.css.map */
