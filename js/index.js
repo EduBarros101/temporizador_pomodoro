@@ -49,6 +49,8 @@ function handleStopClick() {
   minutesDisplay.textContent = String(0).padStart(2, 0)
   secondsDisplay.textContent = String(0).padStart(2, 0)
 
+  clearTimeout(timerSetOut)
+
   console.log('Botão de Stop clicado.')
 }
 
@@ -78,8 +80,8 @@ function countDown() {
     let minutes = Number(minutesDisplay.textContent)
 
     if (minutes <= 0 && seconds == 0) {
-      handleStopClick()
       console.log('Contou até o final.')
+      handleStopClick()
       return
     }
 
