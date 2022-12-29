@@ -54,16 +54,6 @@ function handleStopClick() {
   console.log('Botão de Stop clicado.')
 }
 
-function handleSoundOnClick() {
-  soundOnBtn.classList.add('hide')
-  soundOffBtn.classList.remove('hide')
-}
-
-function handleSoundOffClick() {
-  soundOffBtn.classList.add('hide')
-  soundOnBtn.classList.remove('hide')
-}
-
 function handleSetClick() {
   minutes = prompt('Quantos minutos?') || 0
   seconds = prompt('Quantos segundos?') || 0
@@ -72,6 +62,16 @@ function handleSetClick() {
   secondsDisplay.textContent = String(seconds).padStart(2, '0')
 
   handlePlayClick()
+}
+
+function handleSoundOnClick() {
+  soundOnBtn.classList.add('hide')
+  soundOffBtn.classList.remove('hide')
+}
+
+function handleSoundOffClick() {
+  soundOffBtn.classList.add('hide')
+  soundOnBtn.classList.remove('hide')
 }
 
 function countDown() {
